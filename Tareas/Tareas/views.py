@@ -9,3 +9,8 @@ def saludo(request):
 def despedida(request):
     
     return HttpResponse("Adiós vista")
+
+
+def bienvenida(request):
+
+    return HttpResponse("Hola Vaquero")
