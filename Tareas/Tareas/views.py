@@ -14,3 +14,7 @@ def despedida(request):
 def bienvenida(request):
 
     return HttpResponse("Hola Vaquero")
+
+def vistaPrueba(request):
+
+    return HttpResponse("Probando Github")
