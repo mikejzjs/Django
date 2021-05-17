@@ -1,0 +1,66 @@
+vscode://vscode.github-authentication/did-authenticate?windowid=1&code=325f0007edd1ba62adfb&state=86b87109-5c48-4859-8fae-52a9c359aba0
+
+https://github.com/mikejzjs/Django.git
+
+C:\Users\Mike\Desktop\DJango
+
+
+===========================================
+CREAR PROYECTO
+===========================================
+ir a la ruta de la carpeta donde se almacenarán los proyectos
+abrir cmd
+pegar la ruta
+cd C:\Users\Mike\Desktop\DJango
+
+django-admin startproject NombreDelProyecto
+
+===========================================
+EJECUTAR EL PROYECTO
+===========================================
+Asegurar que estás dentro de la carpeta del proyecto
+python manege.py migrate
+LISTO
+===========================================
+EJECUTAR EL SERVIDOR
+===========================================
+python manage.py runserver
+EL SERVIDOR SE ESTARÁ EJECUTANDO
+se puede acceder a 
+http://127.0.0.1:8000/
+
+
+===========================================
+CREAR PLANTILLA
+===========================================
+
+
+===========================================
+CREAR APLICACIONES
+===========================================
+python manage.py startapp principal cuando se crean en la raiz
+
+django-admin startapp principal
+
+
+
+=============================================
+BASE DE DATOS
+=============================================
+un modelo representa una tabla 
+no hay necesidad de escribir sql 
+DJango ocupa orientado a objetos
+
+
+**Verificar los modelos que hay en todas las aplicaciones
+**crear modelos y base de datos
+python manage.py makemigrations
+
+para traducir el codigo a sql
+python manage.py migrate
+
+
+python manage.py check nombreAplicacion
+python manage.py check principal
+
+
