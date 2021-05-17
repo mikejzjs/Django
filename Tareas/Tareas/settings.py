@@ -56,7 +56,7 @@ ROOT_URLCONF = 'Tareas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['Plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

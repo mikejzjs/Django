@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CRUD-DJango</title>
+<title>{%block titulo%}CRUD-DJango{%endblock titulo%}</title>
 
 <style>
     table {
@@ -21,7 +21,7 @@
     }
     </style>
 </head>
-<body>
+<body>{%block cuerpo%}
 
 <h1>Bienvenido al CRUD de DJango para Tareas</h1>
 <p> A continuación podrás crear, modificar y eliminar tareas</p>
@@ -32,19 +32,24 @@
     <table>
         <tr>
           <th>Tarea</th>
-          <th>Acciones</th>
+          <th>Descripcion</th>
+          <th>Día</th>
+        </tr>
+        <tbody>
+          <!-- código de python -->
+          {% for tarea in tareas %}
+          <tr>
+            <td>{{tarea.nombre}}</td>
+            <td>{{tarea.descripcion}}</td>
+            <td>{{tarea.dia}}</td>
 
-        </tr>
-        <tr>
-          <td>Alta de tareas</td>
-          <td>
-                <button class="danger">Editar</button>
-                <button>Eliminar</button>
-          </td>
-       
-        </tr>
+         
+          </tr>
+          {% endfor %}
+        </tbody>
+
 </table>
 
-
+{%endblock cuerpo%}
 </body>
 </html> 

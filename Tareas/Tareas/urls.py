@@ -16,13 +16,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from principal.views import saludo,altaTarea
 #from Tareas.views import saludo, despedida
 
 
 urlpatterns = [
    path('admin/', admin.site.urls),
-   # path('saludo/', saludo),
-    #path('adios/', despedida),
- 
+   path('',saludo,name='index'),
+    path('alta_tarea/', altaTarea,name='alta_tarea'),
 ]
 

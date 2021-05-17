@@ -64,3 +64,7 @@ python manage.py check nombreAplicacion
 python manage.py check principal
 
 
+===========================================
+CREAR SUPER USUARIO
+============================================
+python manage.py createsuperuser
