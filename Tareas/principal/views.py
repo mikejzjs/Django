@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Tarea
 from .forms import TareaForm
 
@@ -20,8 +20,46 @@ def saludo(request):
 
 
 def altaTarea(request):
-
-     return render(request,'Alta.html')
- 
- 
     
+    if request.method == 'GET':
+        form = TareaForm()
+        contexto = {
+            'form':form
+        }
+    else:
+        form = TareaForm(request.POST)
+        contexto = {'form':form}
+
+    #Si el formulario es válido
+    #se usa save() para guardar en la BD
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+        print(form)
+
+    return render(request,'Alta.html',contexto)
+
+
+
+def editarTarea (request,id):
+    tarea = Tarea.objects.get(id = id)
+    if request.method == 'GET':
+        form = TareaForm(instance = tarea)
+        contexto = {'form':form}
+    else:
+        form = TareaForm(request.POST, instance=tarea)
+        contexto = {'form':form}
+
+    if form.is_valid():
+       form.save()
+       return redirect('index')
+
+
+    return render (request, 'Alta.html',contexto)
+
+
+
+def eliminarTarea(reques, id):
+    tarea = Tarea.objects.get(id = id)
+    tarea.delete()
+    return redirect('index')

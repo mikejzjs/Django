@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from principal.views import saludo,altaTarea
+from principal.views import saludo,altaTarea,editarTarea
 #from Tareas.views import saludo, despedida
 
 
@@ -24,5 +24,6 @@ urlpatterns = [
    path('admin/', admin.site.urls),
    path('',saludo,name='index'),
     path('alta_tarea/', altaTarea,name='alta_tarea'),
+    path('editar_tarea/<int:id>/', editarTarea,name='editar_tarea'),
 ]
 

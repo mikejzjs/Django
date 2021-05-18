@@ -2,6 +2,11 @@
 {%block titulo%}Alta de tareas{%endblock titulo%}
 {%block cuerpo%}
 <form method="POST">
-   
+    <!--Sirve para saber quien es el usuario y su token
+    que está enviando la información-->
+    {% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit">Confirmar</button>
 </form>
+
 {%endblock cuerpo%}

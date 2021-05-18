@@ -34,6 +34,7 @@
           <th>Tarea</th>
           <th>Descripcion</th>
           <th>Día</th>
+          <th>Acciones</th>
         </tr>
         <tbody>
           <!-- código de python -->
@@ -42,6 +43,9 @@
             <td>{{tarea.nombre}}</td>
             <td>{{tarea.descripcion}}</td>
             <td>{{tarea.dia}}</td>
+            <td><a href="{%url 'editar_tarea' tarea.id %}"> Editar </a> <a href=""> Eliminar </a></td>
+            
+           
 
          
           </tr>
