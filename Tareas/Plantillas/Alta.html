@@ -1,7 +1,10 @@
 {% extends 'index.html'%}
 {%block titulo%}Alta de tareas{%endblock titulo%}
 {%block cuerpo%}
+
 <form method="POST">
+    <h1>Alta ó Editar</h1>
+    <p>Para poder dar de alta una tarea llena los campos y presiona el botón 'Confirmar'</p>
     <!--Sirve para saber quien es el usuario y su token
     que está enviando la información-->
     {% csrf_token %}

@@ -26,7 +26,7 @@
 <h1>Bienvenido al CRUD de DJango para Tareas</h1>
 <p> A continuación podrás crear, modificar y eliminar tareas</p>
 
-<button >Crear Tarea</button>
+<a href="{%url 'alta_tarea' %}"> Alta de Tarea </a>
 
 <table>
     <table>
@@ -43,7 +43,7 @@
             <td>{{tarea.nombre}}</td>
             <td>{{tarea.descripcion}}</td>
             <td>{{tarea.dia}}</td>
-            <td><a href="{%url 'editar_tarea' tarea.id %}"> Editar </a> <a href=""> Eliminar </a></td>
+            <td><a href="{%url 'editar_tarea' tarea.id %}"> Editar </a> <a href="{%url 'eliminar_tarea' tarea.id %}"> Eliminar </a></td>
             
            
 
